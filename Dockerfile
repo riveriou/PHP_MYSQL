@@ -9,8 +9,7 @@ RUN apt-get install -y curl net-tools wget vim nano dialog software-properties-c
 
 
 
-ADD . /
-RUN mv /test.php /var/www/html/
+RUN echo "<?PHP phpinfo(); ?>" >> /var/www/html/test.php
 
 RUN apt-get install -y supervisor
 RUN apt-get clean
