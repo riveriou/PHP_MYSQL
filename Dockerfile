@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN ln -snf /usr/share/zoneinfo/Asia/Taipei /etc/localtime && echo Asia/Taipei > /etc/timezone
 RUN apt-get update --fix-missing
-RUN apt-get install -y curl wget vim nano lsof net-tools dialog software-properties-common less unzip mysql-server php php-dev php-xml php-mysql php-gd libapache2-mod-php apache2 --no-install-recommends
+RUN apt-get install -y curl wget vim nano lsof net-tools dialog software-properties-common less unzip mariadb-server php php-dev php-xml php-mysql php-gd libapache2-mod-php apache2 --no-install-recommends
 
 
 
