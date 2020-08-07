@@ -18,8 +18,8 @@ RUN echo "nodaemon=true" >> /etc/supervisor/conf.d/supervisord.conf
 RUN echo "user=root" >> /etc/supervisor/conf.d/supervisord.conf
 
 RUN echo '#!/bin/sh' >> /startup.sh
-RUN echo 'service apache2 restart' >> /startup.sh
-RUN echo 'service mysql restart' >> /startup.sh
+RUN echo 'service apache2 start' >> /startup.sh
+RUN echo 'service mysql start' >> /startup.sh
 RUN echo 'exec supervisord -c /etc/supervisor/supervisord.conf' >> /startup.sh
 
 RUN chmod +x /startup.sh
